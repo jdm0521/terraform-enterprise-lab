@@ -18,23 +18,23 @@ jobs:
 
     steps:
       - name: Checkout Code
-            uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Setup Terraform
-            uses: hashicorp/setup-terraform@v3
+        uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
-            run: terraform init
+        run: terraform init
 
       - name: Terraform Format Check
-            run: terraform fmt -check
+        run: terraform fmt -check
 
       - name: Terraform Validate
-            run: terraform validate
+        run: terraform validate
 
       - name: Select Dev Workspace
-            run: terraform workspace select dev
+        run: terraform workspace select dev
 
       - name: Terraform Plan
-            run: terraform plan -var-file="environments/dev.tfvars"
+        run: terraform plan -var-file="environments/dev.tfvars"
 
