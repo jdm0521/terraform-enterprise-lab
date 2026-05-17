@@ -3,7 +3,7 @@ name: Terraform Production Deploy
 on:
   workflow_dispatch:
 
-  jobs:
+jobs:
   terraform-prod:
   runs-on: ubuntu-latest
 
