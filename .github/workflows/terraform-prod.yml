@@ -17,21 +17,21 @@ jobs:
       ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
 
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v4
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
-    - name: Setup Terraform
-      uses: hashicorp/setup-terraform@v3
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
 
-    - name: Terraform Init
-      run: terraform init
+      - name: Terraform Init
+        run: terraform init
 
-    - name: Select Prod Workspace
-      run: terraform workspace select prod
+      - name: Select Prod Workspace
+        run: terraform workspace select prod
 
-    - name: Terraform Plan
-      run: terraform plan -var-file="environments/prod.tfvars"
+      - name: Terraform Plan
+        run: terraform plan -var-file="environments/prod.tfvars"
 
-    - name: Terraform Apply
-      run: terraform apply -auto-approve -var-file="environments/prod.tfvars"
+      - name: Terraform Apply
+        run: terraform apply -auto-approve -var-file="environments/prod.tfvars"
 
