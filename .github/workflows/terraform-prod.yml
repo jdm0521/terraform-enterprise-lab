@@ -1,11 +1,11 @@
 name: Terraform Production Deploy
 
 on:
-  workflow_dispatch:
+workflow_dispatch:
 
 jobs:
   terraform-prod:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
 
   environment: production
