@@ -31,7 +31,12 @@ Azure Remote Backend (Blob Storage State)
         ↓
 Azure Infrastructure
 ```
+---
+## Architecture Diagram
 
+![Terraform Enterprise Lab Architecture](images/architecture-diagram.png)
+
+---
 ---
 
 ## Infrastructure Architecture
